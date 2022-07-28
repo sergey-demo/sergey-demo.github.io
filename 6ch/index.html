@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>volume-meter example</title>
+    <link href="video-js.min.css" rel="stylesheet">
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        position: relative;
+      }
+      body {
+        padding: 50px;
+      }
+      .container {
+        width: 200px;
+        height: 60px;
+        position: relative;
+      }
+      .left, 
+      .right,
+      .ch3,
+      .ch4,
+      .ch5,
+      .ch6 {
+        width: 16%;
+        height: 100%;
+        background: #A00;
+        position: absolute;
+        bottom: 0;
+      }
+      .right {
+        left: 16%;
+        background: #0A0;
+      }
+      .ch3 {
+        left: 32%;
+        background: #767676;
+      }
+      .ch4 {
+        left: 48%;
+        background: #ffae00;
+      }
+      .ch5 {
+        left: 64%;
+        background: #000000;
+      }
+      .ch6 {
+        left: 80%;
+        background: #8473fb;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left"></div>
+      <div class="right"></div>
+      <div class="ch3"></div>
+      <div class="ch4"></div>
+      <div class="ch5"></div>
+      <div class="ch6"></div>
+    </div>
+    <div class="container" style="height:20px">
+      <div class="left" style="background:white">FL</div>
+      <div class="right" style="background:white">FR</div>
+      <div class="ch3" style="background:white">FC</div>
+      <div class="ch4" style="background:white">SW</div>
+      <div class="ch5" style="background:white">LS</div>
+      <div class="ch6" style="background:white">RS</div>
+    </div>
+    
+    <div>
+
+	<!-- <video id="video1" width=600 data-setup='{"controls": true, "autoplay": false, "preload": "auto"}' class="video-js"> <source src="https://media.axprod.net/TestVectors/v7-Clear/Manifest_1080p.mpd"> <span class="error">Error: Source Statement Failure - Format not supported in this browser?</span> </video> -->
+	<video id="video1" data-setup='{"controls": true, "autoplay": false, "preload": "auto"}' class="video-js"> <source src="ChID-BLITS-EBU.mp4"> <span class="error">Error: Source Statement Failure - Format not supported in this browser?</span> </video>
+	<!-- <video id="video1" data-setup='{"controls": true, "autoplay": false, "preload": "auto"}' class="video-js"> <source src="5.mp4"> <span class="error">Error: Source Statement Failure - Format not supported in this browser?</span> </video> -->
+	<!-- <video id="video1" controls loop> <source src="5.mp4"> <span class="error">Error: Source Statement Failure - Format not supported in this browser?</span> </video> -->
+	<!-- <video id="video1" controls loop> <source src="ChID-BLITS-EBU.mp4" type="video/mp4; codecs=avc1.4D401F,mp4a.40.5"> <span class="error">Error: Source Statement Failure - Format not supported in this browser?</span> </video> -->
+    </div>
+<!--  <script src="https://unpkg.com/video.js/dist/video.js"></script>
+  <script src="https://unpkg.com/videojs-contrib-dash/dist/videojs-dash.js"></script>  -->
+    <script src="video.min.js"></script>
+
+    <script type="text/javascript" src="build.js"></script>
+  </body>
+</html>
