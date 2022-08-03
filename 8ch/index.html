@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>vu meter (8 channels aac)</title>
+<!--    <link href="video-js.min.css" rel="stylesheet"> -->
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        position: relative;
+      }
+      body {
+        padding: 50px;
+      }
+      .container {
+        width: 200px;
+        height: 60px;
+        position: relative;
+      }
+      .left, 
+      .right,
+      .ch3,
+      .ch4,
+      .ch5,
+      .ch6,
+      .ch7,
+      .ch8 {
+        width: 12%;
+        height: 100%;
+        background: #A00;
+        position: absolute;
+        bottom: 0;
+      }
+      .right {
+        left: 12%;
+        background: #0A0;
+      }
+      .ch3 {
+        left: 24%;
+        background: #767676;
+      }
+      .ch4 {
+        left: 36%;
+        background: #ffae00;
+      }
+      .ch5 {
+        left: 48%;
+        background: #000000;
+      }
+      .ch6 {
+        left: 60%;
+        background: #8473fb;
+      }
+      .ch7 {
+        left: 72%;
+        background: #11bb0b;
+      }
+      .ch8 {
+        left: 84%;
+        background: #a0b0c0;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <p>Sound is disconnected from real device</p>
+    <div class="container">
+      <div class="left" id="left1"></div>
+      <div class="right" id="right1"></div>
+      <div class="ch3" id="ch3_1"></div>
+      <div class="ch4" id="ch4_1"></div>
+      <div class="ch5" id="ch5_1"></div>
+      <div class="ch6" id="ch6_1"></div>
+      <div class="ch7" id="ch7_1"></div>
+      <div class="ch8" id="ch8_1"></div>
+    </div>
+    <div class="container" style="height:20px">
+      <div class="left" style="background:white">00</div>
+      <div class="right" style="background:white">01</div>
+      <div class="ch3" style="background:white">02</div>
+      <div class="ch4" style="background:white">03</div>
+      <div class="ch5" style="background:white">04</div>
+      <div class="ch6" style="background:white">05</div>
+      <div class="ch7" style="background:white">06</div>
+      <div class="ch8" style="background:white">07</div>
+    </div>
+    <div>
+
+	<!-- <video id="video1" width=600 data-setup='{"controls": true, "autoplay": false, "preload": "auto"}' class="video-js"> <source src="https://media.axprod.net/TestVectors/v7-Clear/Manifest_1080p.mpd"> <span class="error">Error: Source Statement Failure - Format not supported in this browser?</span> </video> -->
+	<!-- <video id="video1" data-setup='{"controls": true, "autoplay": false, "preload": "auto"}' class="video-js"> <source src="ChID-BLITS-EBU.mp4"> <span class="error">Error: Source Statement Failure - Format not supported in this browser?</span> </video> -->
+	<audio id="video1" controls width=500 loop> <source src="8_n.aac"> <span class="error">Error: Source Statement Failure - Format not supported in this browser?</span> </video>
+	<!-- <video id="video1" controls loop> <source src="ChID-BLITS-EBU.mp4"> <span class="error">Error: Source Statement Failure - Format not supported in this browser?</span> </video> -->
+	<!-- <video id="video1" controls loop> <source src="ChID-BLITS-EBU.mp4" type="video/mp4; codecs=avc1.4D401F,mp4a.40.5"> <span class="error">Error: Source Statement Failure - Format not supported in this browser?</span> </video> -->
+    </div>
+<!--  <script src="https://unpkg.com/video.js/dist/video.js"></script>
+  <script src="https://unpkg.com/videojs-contrib-dash/dist/videojs-dash.js"></script>  -->
+<!--    <script src="video.min.js"></script> -->
+
+    <script type="text/javascript" src="build.js"></script>
+  </body>
+</html>
